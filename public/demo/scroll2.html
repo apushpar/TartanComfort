@@ -1,0 +1,35 @@
+<div ui-content-for="title">
+  <span>Tartan Comfort</span>
+</div>
+
+<div class="scrollable">
+  
+
+  <div class="scrollable-content" ui-scroll-bottom='bottomReached()'>
+    <div class="list-group-item list-group-item-home media">
+        <div class="media-body">
+            <h3 class="media-heading">The temperature in ROOM x is X F. How do you feel just now?</h3>
+            
+        </div>
+      </div>
+
+    <div class="list-group">
+      <a ng-repeat="item in pageTwoItems" href="#/scroll3" class="list-group-item">
+        {{ item }} <i class="fa fa-chevron-right pull-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!--<a class="btn btn-block btn-lg btn-primary scrollable-footer" ui-toggle='searchBar'>
+    <i class="fa fa-search"></i> 
+    <span ui-hide="searchBar">Show</span>
+    <span ui-show="searchBar">Hide</span>
+    Search Bar
+  </a>-->
+  <div ui-content-for="modals">
+  <div ng-include="'modal1.html'"></div>
+  <div ng-include="'modal2.html'"></div>
+</div>
+
+  
+</div>
